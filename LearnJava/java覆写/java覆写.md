@@ -44,7 +44,7 @@ public class TestMain {
 
 父类是private时，该方法对于子类来说并不能直接使用，所以子类定义新的方法属于新的定义和父类没关系。
 
-<imag src="test.png" width="400">
+<img src="test.png" width="400">
 
 
 
