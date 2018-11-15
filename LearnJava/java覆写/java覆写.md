@@ -44,7 +44,72 @@ public class TestMain {
 
 父类是private时，该方法对于子类来说并不能直接使用，所以子类定义新的方法属于新的定义和父类没关系。
 
-<img src="test.png" width="400">
+<imag src="test.img" width="400">
+
+**3. 属性的覆写**
+
+因为父类中属性一般都写成private， 所以属性的覆写了解即可。
+
+**4. super关键字**
+
+> 使用super( )  调用可以调用父类的构造方法，也可以使用super关键字调用父类的属性。
+
+```java
+	public class Person
+	{
+		public String name = "kaikai";
+		public int age = 22;
+	}
+
+	public class Student extends Person
+	{
+		public String name = "machenpei";
+		public void print()
+		{
+			System.out.println(super.name); //调用父类的name属性
+			System.out.println(this.name); //调用当前类的name属性
+		}
+	}
+	
+	public class TestMain
+    {
+    	public static void main(String[] args)
+        {
+            Student stu = new Student();
+            stu.print();
+        }
+    }
+```
+
+**5. final关键字**
+
+**java中final被称为终结器， final可以修饰类、方法、属性。**
+
+- final修饰的类不能有子类。
+
+```java
+final class A{}
+```
+
+- final 修饰的方法不能被子类覆写。
+
+```java
+class A
+{
+    public final void print()
+    {
+	}
+}
+```
+
+- final修饰变量的时候， 变量就成了常量， 并且必须初始化，不能被修改。开发中， 常量声明必须要大写。
+
+```java
+class A
+{
+	public final int AGE = 20；
+}
+```
 
 
 
